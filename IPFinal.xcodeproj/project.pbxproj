@@ -14,6 +14,8 @@
 		18462A4D23C4587C0004C5EE /* libopencv_imgproc.4.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 18462A4B23C4587C0004C5EE /* libopencv_imgproc.4.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		18462A4F23C458890004C5EE /* libopencv_video.4.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18462A4E23C458890004C5EE /* libopencv_video.4.2.0.dylib */; };
 		18462A5023C458890004C5EE /* libopencv_video.4.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 18462A4E23C458890004C5EE /* libopencv_video.4.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		18462A5323C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18462A5223C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib */; };
+		18462A5423C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 18462A5223C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				18462A5423C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Embed Libraries */,
 				18462A4923C458620004C5EE /* libopencv_core.4.2.0.dylib in Embed Libraries */,
 				18462A4D23C4587C0004C5EE /* libopencv_imgproc.4.2.0.dylib in Embed Libraries */,
 				18462A5023C458890004C5EE /* libopencv_video.4.2.0.dylib in Embed Libraries */,
@@ -147,6 +150,7 @@
 		18462A4723C458620004C5EE /* libopencv_core.4.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.4.2.0.dylib; path = ../../../../usr/local/lib/libopencv_core.4.2.0.dylib; sourceTree = "<group>"; };
 		18462A4B23C4587C0004C5EE /* libopencv_imgproc.4.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.4.2.0.dylib; path = ../../../../usr/local/lib/libopencv_imgproc.4.2.0.dylib; sourceTree = "<group>"; };
 		18462A4E23C458890004C5EE /* libopencv_video.4.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_video.4.2.0.dylib; path = ../../../../usr/local/lib/libopencv_video.4.2.0.dylib; sourceTree = "<group>"; };
+		18462A5223C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgcodecs.4.2.0.dylib; path = ../../../../usr/local/lib/libopencv_imgcodecs.4.2.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18462A5323C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Frameworks */,
 				18462A4823C458620004C5EE /* libopencv_core.4.2.0.dylib in Frameworks */,
 				18462A4C23C4587C0004C5EE /* libopencv_imgproc.4.2.0.dylib in Frameworks */,
 				18462A4F23C458890004C5EE /* libopencv_video.4.2.0.dylib in Frameworks */,
@@ -191,6 +196,7 @@
 		184629DD23C446A50004C5EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18462A5223C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib */,
 				18462A4E23C458890004C5EE /* libopencv_video.4.2.0.dylib */,
 				18462A4B23C4587C0004C5EE /* libopencv_imgproc.4.2.0.dylib */,
 				18462A4723C458620004C5EE /* libopencv_core.4.2.0.dylib */,
@@ -309,6 +315,7 @@
 				184629D023C446270004C5EE /* Frameworks */,
 				184629D123C446270004C5EE /* CopyFiles */,
 				18462A4A23C458620004C5EE /* Embed Libraries */,
+				18462A5123C45E4F0004C5EE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -350,6 +357,26 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18462A5123C45E4F0004C5EE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -r ${SRCROOT}/Assets ${BUILT_PRODUCTS_DIR}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		184629CF23C446270004C5EE /* Sources */ = {
