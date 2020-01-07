@@ -12,6 +12,8 @@
 
 int main(int argc, const char * argv[]) {
     cv::Mat mat;
-    mat = cv::imread("Assets/Windmill.png");
+    mat = cv::imread("Assets/Windmill.jpg");
+    cv::imshow("Image", mat);
+    cv::waitKey(0);
     return 0;
 }
