@@ -11,6 +11,6 @@
 
 
 int main(int argc, const char * argv[]) {
-    
+    cv::Mat mat;
     return 0;
 }
