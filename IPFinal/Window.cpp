@@ -42,3 +42,8 @@ glm::vec2 Window::getResolution() {
     return { (float) windowWidth, (float) windowHeight };
 }
 
+bool Window::keyPressed(int code) { 
+    return glfwGetKey(nativeWindow, code);
+}
+
+

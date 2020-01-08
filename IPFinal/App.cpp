@@ -26,7 +26,7 @@ void App::start() {
         glWindow.pollEvents();
         glRenderer.bufferTexture(hardwareCamera.getRawMemory(), (hardwareCamera.getBufferHeight() * hardwareCamera.getBufferWidth()) * 3);
         standardProgram.use();
-        standardProgram.setResolution(glWindow.getResolution());
+        standardProgram.setResolution(glm::vec2(hardwareCamera.getBufferWidth(), hardwareCamera.getBufferHeight()));
         glRenderer.render(standardProgram);
         glWindow.swapBuffers();
     }

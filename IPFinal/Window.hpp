@@ -26,6 +26,7 @@ public:
 
     glm::vec2 getResolution();
     bool shouldClose();
+    bool keyPressed(int code);
     
 private:
     GLFWwindow *nativeWindow;
