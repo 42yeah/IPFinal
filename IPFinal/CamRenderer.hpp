@@ -10,7 +10,8 @@
 #define CamRenderer_hpp
 
 #include "StandardProgram.hpp"
-#include "Renderer.hpp"
+#include "IRenderer.hpp"
+
 
 class CamRenderer : public IRenderer {
 public:

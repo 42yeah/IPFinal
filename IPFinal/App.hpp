@@ -11,7 +11,7 @@
 
 #include "CamFetch.hpp"
 #include "Window.hpp"
-#include "Renderer.hpp"
+#include "IRenderer.hpp"
 #include "CamRenderer.hpp"
 
 
@@ -32,6 +32,8 @@ private:
     Window glWindow;
     CamRenderer camRenderer;
     StandardProgram standardProgram;
+    
+    std::vector<IRenderer *> rendererList;
 };
 
 #endif /* App_hpp */

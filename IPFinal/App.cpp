@@ -15,9 +15,12 @@ void App::init() {
     hardwareCamera = Camera(0);
     glWindow = Window("GL Window", 800, 600);
     glWindow.init();
+    standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
+    
+    // === RENDERERS === //
     camRenderer = CamRenderer();
     camRenderer.init();
-    standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
+    rendererList.push_back(&camRenderer);
 }
 
 void App::start() {
