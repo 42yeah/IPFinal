@@ -8,12 +8,30 @@
 
 #include "Renderer.hpp"
 #include "glad/glad/glad.h"
+#include "Macros.h"
 
 
 void Renderer::init() { 
     glClearColor(1.0f, 0.5f, 0.0f, 1.0f);
+    glGenVertexArrays(1, &VAO);
+    GLuint VBO;
+    glGenBuffers(1, &VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    float data[] = {
+        /* aPos */
+        0.0f, 0.0f,
+        0.5f, 0.0f,
+        0.0f, 0.5f
+    };
+    glBufferData(GL_ARRAY_BUFFER, sizeof(data), data, GL_STATIC_DRAW);
+    LOG("%d", glGetError());
+    standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
 }
 
 void Renderer::render() { 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glBindVertexArray(VAO);
+    standardProgram.use();
+    standardProgram.configVertexPointers();
+    glDrawArrays(GL_TRIANGLES, 0, 3);
 }

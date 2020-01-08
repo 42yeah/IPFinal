@@ -21,6 +21,8 @@ public:
     
 private:
     // === VARIABLES === //
+    StandardProgram standardProgram;
+    GLuint VAO;
 };
 
 #endif /* Renderer_hpp */

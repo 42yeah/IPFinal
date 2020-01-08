@@ -34,7 +34,7 @@ private:
     GLuint program;
     
     // === LOCATIONS === //
-    GLuint aPosLoc;
+    // 
 };
 
 #endif /* StandardProgram_hpp */

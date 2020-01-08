@@ -26,7 +26,7 @@ void StandardProgram::link(std::string vertexShaderPath, std::string fragmentSha
     this->program = program;
     
     // === INITIALIZE LOCATION VARIABLES === //
-    aPosLoc = glGetUniformLocation(this->program, "aPos");
+    // 
 }
 
 GLuint StandardProgram::compile(GLuint shaderType, std::string shaderPath) { 
@@ -50,6 +50,6 @@ void StandardProgram::use() {
 
 void StandardProgram::configVertexPointers() {
     this->use();
-    glEnableVertexAttribArray(aPosLoc);
-    glVertexAttribPointer(aPosLoc, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, nullptr);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, nullptr);
 }
