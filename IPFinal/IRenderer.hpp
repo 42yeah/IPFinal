@@ -10,6 +10,7 @@
 #define Renderer_hpp
 
 #include "StandardProgram.hpp"
+#include "Framebuffer.hpp"
 
 
 class IRenderer {
@@ -18,6 +19,7 @@ public:
     
     virtual void init() = 0;
     virtual void render(StandardProgram &standardProgram) = 0;
+    virtual void renderToFrameBuffer(StandardProgram &standardProgram, Framebuffer &fbo);
 };
 
 #endif /* Renderer_hpp */

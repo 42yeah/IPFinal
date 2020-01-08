@@ -17,3 +17,8 @@ void Framebuffer::bind() {
     glBindFramebuffer(GL_FRAMEBUFFER, FBO);
 }
 
+void Framebuffer::unbind() { 
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+}
+
+

@@ -7,3 +7,10 @@
 //
 
 #include "IRenderer.hpp"
+
+
+void IRenderer::renderToFrameBuffer(StandardProgram &standardProgram, Framebuffer &fbo) {
+    fbo.bind();
+    render(standardProgram);
+    fbo.unbind();
+}

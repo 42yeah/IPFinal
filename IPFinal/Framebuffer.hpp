@@ -17,6 +17,7 @@ public:
     Framebuffer();
     
     void bind();
+    void unbind();
     
 private:
     GLuint FBO;
