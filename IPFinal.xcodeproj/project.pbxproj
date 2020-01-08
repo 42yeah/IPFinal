@@ -47,6 +47,8 @@
 		1894F86E23C5A2AE000495B3 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F86C23C5A2AE000495B3 /* Window.cpp */; };
 		1894F87023C5A2D0000495B3 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1894F86F23C5A2D0000495B3 /* libglfw.3.dylib */; };
 		1894F87123C5A2D0000495B3 /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1894F86F23C5A2D0000495B3 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1894F87423C5A5E1000495B3 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87223C5A5E1000495B3 /* Renderer.cpp */; };
+		1894F87623C5A628000495B3 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87523C5A628000495B3 /* glad.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -211,6 +213,11 @@
 		1894F86C23C5A2AE000495B3 /* Window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		1894F86D23C5A2AE000495B3 /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		1894F86F23C5A2D0000495B3 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../../Archive/glfw-3.3.bin.MACOS/lib-macos/libglfw.3.dylib"; sourceTree = "<group>"; };
+		1894F87223C5A5E1000495B3 /* Renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		1894F87323C5A5E1000495B3 /* Renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		1894F87523C5A628000495B3 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
+		1894F87923C5A632000495B3 /* khrplatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
+		1894F87B23C5A632000495B3 /* glad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +277,8 @@
 		184629D523C446270004C5EE /* IPFinal */ = {
 			isa = PBXGroup;
 			children = (
+				1894F87723C5A632000495B3 /* glad */,
+				1894F87523C5A628000495B3 /* glad.c */,
 				1894F86523C59BF1000495B3 /* IPFinal.entitlements */,
 				184629D623C446270004C5EE /* main.cpp */,
 				1894F86623C59D9E000495B3 /* CamFetch.cpp */,
@@ -278,6 +287,8 @@
 				1894F86A23C59E83000495B3 /* App.hpp */,
 				1894F86C23C5A2AE000495B3 /* Window.cpp */,
 				1894F86D23C5A2AE000495B3 /* Window.hpp */,
+				1894F87223C5A5E1000495B3 /* Renderer.cpp */,
+				1894F87323C5A5E1000495B3 /* Renderer.hpp */,
 			);
 			path = IPFinal;
 			sourceTree = "<group>";
@@ -405,6 +416,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1894F87723C5A632000495B3 /* glad */ = {
+			isa = PBXGroup;
+			children = (
+				1894F87823C5A632000495B3 /* KHR */,
+				1894F87A23C5A632000495B3 /* glad */,
+			);
+			path = glad;
+			sourceTree = "<group>";
+		};
+		1894F87823C5A632000495B3 /* KHR */ = {
+			isa = PBXGroup;
+			children = (
+				1894F87923C5A632000495B3 /* khrplatform.h */,
+			);
+			path = KHR;
+			sourceTree = "<group>";
+		};
+		1894F87A23C5A632000495B3 /* glad */ = {
+			isa = PBXGroup;
+			children = (
+				1894F87B23C5A632000495B3 /* glad.h */,
+			);
+			path = glad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -485,9 +521,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1894F86B23C59E83000495B3 /* App.cpp in Sources */,
+				1894F87423C5A5E1000495B3 /* Renderer.cpp in Sources */,
 				1894F86823C59D9E000495B3 /* CamFetch.cpp in Sources */,
 				184629D723C446270004C5EE /* main.cpp in Sources */,
 				1894F86E23C5A2AE000495B3 /* Window.cpp in Sources */,
+				1894F87623C5A628000495B3 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
