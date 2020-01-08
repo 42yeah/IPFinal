@@ -8,7 +8,6 @@
 
 #include "Window.hpp"
 #include <cassert>
-#include "glad/glad/glad.h"
 
 
 Window::Window(std::string title, int w, int h) : windowTitle(title), windowWidth(w), windowHeight(h) {

@@ -13,6 +13,12 @@
 class Renderer {
 public:
     Renderer() {}
+    
+    void init();
+    void render();
+    
+private:
+    // === VARIABLES === //
 };
 
 #endif /* Renderer_hpp */

@@ -14,6 +14,8 @@ void App::init() {
     hardwareCamera = Camera(0);
     glWindow = Window("GL Window", 800, 600);
     glWindow.init();
+    glRenderer = Renderer();
+    glRenderer.init();
 }
 
 void App::start() {
@@ -24,6 +26,7 @@ void App::start() {
 //            break;
 //        }
         glWindow.pollEvents();
+        glRenderer.render();
         glWindow.swapBuffers();
     }
 }

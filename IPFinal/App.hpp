@@ -11,6 +11,7 @@
 
 #include "CamFetch.hpp"
 #include "Window.hpp"
+#include "Renderer.hpp"
 
 
 class App {
@@ -28,6 +29,7 @@ private:
     // === VARIABLES === //
     Camera hardwareCamera;
     Window glWindow;
+    Renderer glRenderer;
 };
 
 #endif /* App_hpp */

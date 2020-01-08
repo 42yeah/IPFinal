@@ -9,6 +9,7 @@
 #ifndef Window_hpp
 #define Window_hpp
 
+#include "glad/glad/glad.h"
 #include <GLFW/glfw3.h>
 #include <string>
 
