@@ -24,6 +24,10 @@ void App::start() {
     while (!glWindow.shouldClose()) {
         hardwareCamera.read();
         glWindow.pollEvents();
+        if (glWindow.keyPressed(GLFW_KEY_R)) {
+            LOG("Relinking...");
+            standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
+        }
         glRenderer.bufferTexture(hardwareCamera.getRawMemory(), (hardwareCamera.getBufferHeight() * hardwareCamera.getBufferWidth()) * 3);
         standardProgram.use();
         standardProgram.setResolution(glm::vec2(hardwareCamera.getBufferWidth(), hardwareCamera.getBufferHeight()));

@@ -12,7 +12,8 @@ void main() {
     vec2 invUV = vec2(uv.x, 1.0 - uv.y);
     vec2 sp = invUV * resolution;
     ivec2 samplePos = ivec2(floor(sp.x), floor(sp.y));
-    int offset = samplePos.x + int(samplePos.y * resolution.x) + 10;
+    int offset = samplePos.x + int(samplePos.y * resolution.x);
     vec3 sampled = texelFetch(cameraTexture, offset).bgr;
-    color = vec4(sampled.r, 1.0);
+    float redness = sampled.r / 256.0;
+    color = vec4(redness, redness, redness, 1.0);
 }
