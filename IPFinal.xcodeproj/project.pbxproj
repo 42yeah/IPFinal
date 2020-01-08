@@ -42,6 +42,8 @@
 		18462A8123C460DE0004C5EE /* libopencv_photo.4.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 18462A6B23C460DE0004C5EE /* libopencv_photo.4.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		18462A9823C4775D0004C5EE /* libopencv_videoio.4.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18462A6123C460DE0004C5EE /* libopencv_videoio.4.2.0.dylib */; };
 		18462A9923C4775D0004C5EE /* libopencv_videoio.4.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 18462A6123C460DE0004C5EE /* libopencv_videoio.4.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1894F86823C59D9E000495B3 /* CamFetch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F86623C59D9E000495B3 /* CamFetch.cpp */; };
+		1894F86B23C59E83000495B3 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F86923C59E83000495B3 /* App.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -198,6 +200,10 @@
 		18462A8223C463EC0004C5EE /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		1894F86423C5995C000495B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1894F86523C59BF1000495B3 /* IPFinal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IPFinal.entitlements; sourceTree = "<group>"; };
+		1894F86623C59D9E000495B3 /* CamFetch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CamFetch.cpp; sourceTree = "<group>"; };
+		1894F86723C59D9E000495B3 /* CamFetch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CamFetch.hpp; sourceTree = "<group>"; };
+		1894F86923C59E83000495B3 /* App.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
+		1894F86A23C59E83000495B3 /* App.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = App.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +264,10 @@
 			children = (
 				1894F86523C59BF1000495B3 /* IPFinal.entitlements */,
 				184629D623C446270004C5EE /* main.cpp */,
+				1894F86623C59D9E000495B3 /* CamFetch.cpp */,
+				1894F86723C59D9E000495B3 /* CamFetch.hpp */,
+				1894F86923C59E83000495B3 /* App.cpp */,
+				1894F86A23C59E83000495B3 /* App.hpp */,
 			);
 			path = IPFinal;
 			sourceTree = "<group>";
@@ -463,6 +473,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1894F86B23C59E83000495B3 /* App.cpp in Sources */,
+				1894F86823C59D9E000495B3 /* CamFetch.cpp in Sources */,
 				184629D723C446270004C5EE /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

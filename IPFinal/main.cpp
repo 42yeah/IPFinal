@@ -7,22 +7,12 @@
 //
 
 #include <iostream>
-#include <opencv2/opencv.hpp>
+#include "App.hpp"
 
 
 int main(int argc, const char * argv[]) {
-    cv::Mat frame;
-    cv::VideoCapture capture;
-    int deviceID = 0;
-    int apiID = cv::CAP_ANY;
-    capture.open(deviceID + apiID);
-    while (true) {
-        capture.read(frame);
-        cv::imshow("Capture", frame);
-        if (cv::waitKey(5) >= 0) {
-            break;
-        }
-    }
-    std::cout << "Done" << std::endl;
+    App app;
+    app.init();
+    app.start();
     return 0;
 }
