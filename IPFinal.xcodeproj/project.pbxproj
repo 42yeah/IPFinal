@@ -47,7 +47,7 @@
 		1894F86E23C5A2AE000495B3 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F86C23C5A2AE000495B3 /* Window.cpp */; };
 		1894F87023C5A2D0000495B3 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1894F86F23C5A2D0000495B3 /* libglfw.3.dylib */; };
 		1894F87123C5A2D0000495B3 /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1894F86F23C5A2D0000495B3 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		1894F87423C5A5E1000495B3 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87223C5A5E1000495B3 /* Renderer.cpp */; };
+		1894F87423C5A5E1000495B3 /* IRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87223C5A5E1000495B3 /* IRenderer.cpp */; };
 		1894F87623C5A628000495B3 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87523C5A628000495B3 /* glad.c */; };
 		1894F87E23C5A80B000495B3 /* StandardProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87C23C5A80B000495B3 /* StandardProgram.cpp */; };
 		1894F88423C60968000495B3 /* CamRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F88223C60968000495B3 /* CamRenderer.cpp */; };
@@ -215,8 +215,8 @@
 		1894F86C23C5A2AE000495B3 /* Window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		1894F86D23C5A2AE000495B3 /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		1894F86F23C5A2D0000495B3 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../../Archive/glfw-3.3.bin.MACOS/lib-macos/libglfw.3.dylib"; sourceTree = "<group>"; };
-		1894F87223C5A5E1000495B3 /* Renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
-		1894F87323C5A5E1000495B3 /* Renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		1894F87223C5A5E1000495B3 /* IRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRenderer.cpp; sourceTree = "<group>"; };
+		1894F87323C5A5E1000495B3 /* IRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRenderer.hpp; sourceTree = "<group>"; };
 		1894F87523C5A628000495B3 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 		1894F87923C5A632000495B3 /* khrplatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
 		1894F87B23C5A632000495B3 /* glad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
@@ -296,8 +296,8 @@
 				1894F86A23C59E83000495B3 /* App.hpp */,
 				1894F86C23C5A2AE000495B3 /* Window.cpp */,
 				1894F86D23C5A2AE000495B3 /* Window.hpp */,
-				1894F87223C5A5E1000495B3 /* Renderer.cpp */,
-				1894F87323C5A5E1000495B3 /* Renderer.hpp */,
+				1894F87223C5A5E1000495B3 /* IRenderer.cpp */,
+				1894F87323C5A5E1000495B3 /* IRenderer.hpp */,
 				1894F87F23C5A973000495B3 /* Macros.h */,
 				1894F88223C60968000495B3 /* CamRenderer.cpp */,
 				1894F88323C60968000495B3 /* CamRenderer.hpp */,
@@ -534,7 +534,7 @@
 			files = (
 				1894F88423C60968000495B3 /* CamRenderer.cpp in Sources */,
 				1894F86B23C59E83000495B3 /* App.cpp in Sources */,
-				1894F87423C5A5E1000495B3 /* Renderer.cpp in Sources */,
+				1894F87423C5A5E1000495B3 /* IRenderer.cpp in Sources */,
 				1894F87E23C5A80B000495B3 /* StandardProgram.cpp in Sources */,
 				1894F86823C59D9E000495B3 /* CamFetch.cpp in Sources */,
 				184629D723C446270004C5EE /* main.cpp in Sources */,
