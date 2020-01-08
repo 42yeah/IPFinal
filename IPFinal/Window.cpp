@@ -8,6 +8,7 @@
 
 #include "Window.hpp"
 #include <cassert>
+#include "glad/glad/glad.h"
 
 
 Window::Window(std::string title, int w, int h) : windowTitle(title), windowWidth(w), windowHeight(h) {
@@ -23,6 +24,7 @@ void Window::init() {
     nativeWindow = glfwCreateWindow(windowWidth, windowHeight, windowTitle.c_str(), nullptr, nullptr);
     assert(nativeWindow != nullptr);
     glfwMakeContextCurrent(nativeWindow);
+    gladLoadGL();
 }
 
 bool Window::shouldClose() {
