@@ -18,13 +18,13 @@ void Renderer::init() {
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     float data[] = {
-        /* aPos */
-        -1.0f, -1.0f,
-        1.0f, -1.0f,
-        1.0f, 1.0f,
-        1.0f, 1.0f,
-        -1.0f, 1.0f,
-        -1.0f, -1.0f
+        /* aPos */ /* Texture UV */
+        -1.0f, -1.0f, 0.0f, 0.0f,
+        1.0f, -1.0f, 1.0f, 0.0f,
+        1.0f, 1.0f, 1.0f, 1.0f,
+        1.0f, 1.0f, 1.0f, 1.0f,
+        -1.0f, 1.0f, 0.0f, 1.0f,
+        -1.0f, -1.0f, 0.0f, 0.0f
     };
     glBufferData(GL_ARRAY_BUFFER, sizeof(data), data, GL_STATIC_DRAW);
     standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
