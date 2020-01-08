@@ -11,11 +11,11 @@
 #include "Macros.h"
 
 
-Renderer::Renderer() : TBO(0), dynamicTexture(0) {
+CamRenderer::CamRenderer() : TBO(0), dynamicTexture(0) {
     
 }
 
-void Renderer::init() { 
+void CamRenderer::init() {
     glClearColor(1.0f, 0.5f, 0.0f, 1.0f);
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -32,7 +32,7 @@ void Renderer::init() {
     glBufferData(GL_ARRAY_BUFFER, sizeof(data), data, GL_STATIC_DRAW);
 }
 
-void Renderer::render(StandardProgram standardProgram) { 
+void CamRenderer::render(StandardProgram &standardProgram) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     standardProgram.use();
     standardProgram.setCameraTexture(dynamicTexture, TBO);
@@ -42,7 +42,7 @@ void Renderer::render(StandardProgram standardProgram) {
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
 
-void Renderer::bufferTexture(void *buffer, int size) {
+void CamRenderer::bufferTexture(void *buffer, int size) {
     if (!TBO) {
         glGenBuffers(1, &TBO);
         glBindBuffer(GL_TEXTURE_BUFFER, TBO);

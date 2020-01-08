@@ -29,7 +29,7 @@ private:
     // === VARIABLES === //
     Camera hardwareCamera;
     Window glWindow;
-    Renderer glRenderer;
+    CamRenderer camRenderer;
     StandardProgram standardProgram;
 };
 

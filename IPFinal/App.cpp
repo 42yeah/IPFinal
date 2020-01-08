@@ -15,8 +15,8 @@ void App::init() {
     hardwareCamera = Camera(0);
     glWindow = Window("GL Window", 800, 600);
     glWindow.init();
-    glRenderer = Renderer();
-    glRenderer.init();
+    camRenderer = CamRenderer();
+    camRenderer.init();
     standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
 }
 
@@ -25,13 +25,12 @@ void App::start() {
         hardwareCamera.read();
         glWindow.pollEvents();
         if (glWindow.keyPressed(GLFW_KEY_R)) {
-            LOG("Relinking...");
             standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
         }
-        glRenderer.bufferTexture(hardwareCamera.getRawMemory(), (hardwareCamera.getBufferHeight() * hardwareCamera.getBufferWidth()) * 3);
+        camRenderer.bufferTexture(hardwareCamera.getRawMemory(), (hardwareCamera.getBufferHeight() * hardwareCamera.getBufferWidth()) * 3);
         standardProgram.use();
         standardProgram.setResolution(glm::vec2(hardwareCamera.getBufferWidth(), hardwareCamera.getBufferHeight()));
-        glRenderer.render(standardProgram);
+        camRenderer.render(standardProgram);
         glWindow.swapBuffers();
     }
 }
