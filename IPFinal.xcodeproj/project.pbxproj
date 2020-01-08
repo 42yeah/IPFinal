@@ -51,6 +51,7 @@
 		1894F87623C5A628000495B3 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87523C5A628000495B3 /* glad.c */; };
 		1894F87E23C5A80B000495B3 /* StandardProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87C23C5A80B000495B3 /* StandardProgram.cpp */; };
 		1894F88423C60968000495B3 /* CamRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F88223C60968000495B3 /* CamRenderer.cpp */; };
+		1894F88723C60AB1000495B3 /* Framebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F88523C60AB1000495B3 /* Framebuffer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -225,6 +226,8 @@
 		1894F87F23C5A973000495B3 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		1894F88223C60968000495B3 /* CamRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CamRenderer.cpp; sourceTree = "<group>"; };
 		1894F88323C60968000495B3 /* CamRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CamRenderer.hpp; sourceTree = "<group>"; };
+		1894F88523C60AB1000495B3 /* Framebuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Framebuffer.cpp; sourceTree = "<group>"; };
+		1894F88623C60AB1000495B3 /* Framebuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Framebuffer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +304,8 @@
 				1894F87F23C5A973000495B3 /* Macros.h */,
 				1894F88223C60968000495B3 /* CamRenderer.cpp */,
 				1894F88323C60968000495B3 /* CamRenderer.hpp */,
+				1894F88523C60AB1000495B3 /* Framebuffer.cpp */,
+				1894F88623C60AB1000495B3 /* Framebuffer.hpp */,
 			);
 			path = IPFinal;
 			sourceTree = "<group>";
@@ -539,6 +544,7 @@
 				1894F86823C59D9E000495B3 /* CamFetch.cpp in Sources */,
 				184629D723C446270004C5EE /* main.cpp in Sources */,
 				1894F86E23C5A2AE000495B3 /* Window.cpp in Sources */,
+				1894F88723C60AB1000495B3 /* Framebuffer.cpp in Sources */,
 				1894F87623C5A628000495B3 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
