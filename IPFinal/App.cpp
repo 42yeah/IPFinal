@@ -8,6 +8,7 @@
 
 #include "App.hpp"
 #include <opencv2/opencv.hpp>
+#include "Macros.h"
 
 
 void App::init() { 
@@ -19,6 +20,7 @@ void App::init() {
 }
 
 void App::start() {
+    LOG("Hello world! The quick brown fox jumps over the lazy: %s", "dog");
     while (!glWindow.shouldClose()) {
         cv::Mat &mat = hardwareCamera.read();
 //        cv::imshow("Cam", mat);

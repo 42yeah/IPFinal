@@ -9,6 +9,8 @@
 #ifndef Renderer_hpp
 #define Renderer_hpp
 
+#include "StandardProgram.hpp"
+
 
 class Renderer {
 public:

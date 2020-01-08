@@ -221,6 +221,7 @@
 		1894F87B23C5A632000495B3 /* glad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
 		1894F87C23C5A80B000495B3 /* StandardProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StandardProgram.cpp; sourceTree = "<group>"; };
 		1894F87D23C5A80B000495B3 /* StandardProgram.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StandardProgram.hpp; sourceTree = "<group>"; };
+		1894F87F23C5A973000495B3 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +295,7 @@
 				1894F86D23C5A2AE000495B3 /* Window.hpp */,
 				1894F87223C5A5E1000495B3 /* Renderer.cpp */,
 				1894F87323C5A5E1000495B3 /* Renderer.hpp */,
+				1894F87F23C5A973000495B3 /* Macros.h */,
 			);
 			path = IPFinal;
 			sourceTree = "<group>";
