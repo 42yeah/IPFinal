@@ -44,6 +44,9 @@
 		18462A9923C4775D0004C5EE /* libopencv_videoio.4.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 18462A6123C460DE0004C5EE /* libopencv_videoio.4.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		1894F86823C59D9E000495B3 /* CamFetch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F86623C59D9E000495B3 /* CamFetch.cpp */; };
 		1894F86B23C59E83000495B3 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F86923C59E83000495B3 /* App.cpp */; };
+		1894F86E23C5A2AE000495B3 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F86C23C5A2AE000495B3 /* Window.cpp */; };
+		1894F87023C5A2D0000495B3 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1894F86F23C5A2D0000495B3 /* libglfw.3.dylib */; };
+		1894F87123C5A2D0000495B3 /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1894F86F23C5A2D0000495B3 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +66,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				18462A8123C460DE0004C5EE /* libopencv_photo.4.2.0.dylib in Embed Libraries */,
+				1894F87123C5A2D0000495B3 /* libglfw.3.dylib in Embed Libraries */,
 				18462A7123C460DE0004C5EE /* libopencv_calib3d.4.2.0.dylib in Embed Libraries */,
 				18462A5423C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Embed Libraries */,
 				18462A4923C458620004C5EE /* libopencv_core.4.2.0.dylib in Embed Libraries */,
@@ -204,6 +208,9 @@
 		1894F86723C59D9E000495B3 /* CamFetch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CamFetch.hpp; sourceTree = "<group>"; };
 		1894F86923C59E83000495B3 /* App.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		1894F86A23C59E83000495B3 /* App.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = App.hpp; sourceTree = "<group>"; };
+		1894F86C23C5A2AE000495B3 /* Window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		1894F86D23C5A2AE000495B3 /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
+		1894F86F23C5A2D0000495B3 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../../Archive/glfw-3.3.bin.MACOS/lib-macos/libglfw.3.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18462A5A23C460DE0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Frameworks */,
+				1894F87023C5A2D0000495B3 /* libglfw.3.dylib in Frameworks */,
 				18462A5823C460DE0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Frameworks */,
 				18462A9823C4775D0004C5EE /* libopencv_videoio.4.2.0.dylib in Frameworks */,
 				18462A5523C460DE0004C5EE /* libopencv_core.4.2.0.dylib in Frameworks */,
@@ -268,6 +276,8 @@
 				1894F86723C59D9E000495B3 /* CamFetch.hpp */,
 				1894F86923C59E83000495B3 /* App.cpp */,
 				1894F86A23C59E83000495B3 /* App.hpp */,
+				1894F86C23C5A2AE000495B3 /* Window.cpp */,
+				1894F86D23C5A2AE000495B3 /* Window.hpp */,
 			);
 			path = IPFinal;
 			sourceTree = "<group>";
@@ -275,6 +285,7 @@
 		184629DD23C446A50004C5EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1894F86F23C5A2D0000495B3 /* libglfw.3.dylib */,
 				18462A6323C460DE0004C5EE /* libopencv_calib3d.4.2.0.dylib */,
 				18462A6A23C460DE0004C5EE /* libopencv_dnn.4.2.0.dylib */,
 				18462A6923C460DE0004C5EE /* libopencv_features2d.4.2.0.dylib */,
@@ -476,6 +487,7 @@
 				1894F86B23C59E83000495B3 /* App.cpp in Sources */,
 				1894F86823C59D9E000495B3 /* CamFetch.cpp in Sources */,
 				184629D723C446270004C5EE /* main.cpp in Sources */,
+				1894F86E23C5A2AE000495B3 /* Window.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,9 +611,15 @@
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = KL2JALR869;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = /usr/local/include/opencv4;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/opencv4,
+					"/Users/apple/Archive/glfw-3.3.bin.MACOS/include/",
+				);
 				INFOPLIST_FILE = Info.plist;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"/Users/apple/Archive/glfw-3.3.bin.MACOS/lib-macos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -614,9 +632,15 @@
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = KL2JALR869;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = /usr/local/include/opencv4;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/opencv4,
+					"/Users/apple/Archive/glfw-3.3.bin.MACOS/include/",
+				);
 				INFOPLIST_FILE = Info.plist;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"/Users/apple/Archive/glfw-3.3.bin.MACOS/lib-macos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
