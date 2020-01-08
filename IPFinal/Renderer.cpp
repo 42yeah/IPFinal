@@ -19,12 +19,14 @@ void Renderer::init() {
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     float data[] = {
         /* aPos */
-        0.0f, 0.0f,
-        0.5f, 0.0f,
-        0.0f, 0.5f
+        -1.0f, -1.0f,
+        1.0f, -1.0f,
+        1.0f, 1.0f,
+        1.0f, 1.0f,
+        -1.0f, 1.0f,
+        -1.0f, -1.0f
     };
     glBufferData(GL_ARRAY_BUFFER, sizeof(data), data, GL_STATIC_DRAW);
-    LOG("%d", glGetError());
     standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
 }
 
@@ -33,5 +35,5 @@ void Renderer::render() {
     glBindVertexArray(VAO);
     standardProgram.use();
     standardProgram.configVertexPointers();
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
 }
