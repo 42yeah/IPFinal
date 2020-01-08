@@ -20,19 +20,4 @@ public:
     virtual void render(StandardProgram &standardProgram) = 0;
 };
 
-class CamRenderer : public IRenderer {
-public:
-    CamRenderer();
-    
-    virtual void init() override;
-    virtual void render(StandardProgram &standardProgram) override;
-    void bufferTexture(void *buffer, int size);
-    
-private:
-    // === VARIABLES === //
-    GLuint VAO, VBO;
-    GLuint TBO;
-    GLuint dynamicTexture;
-};
-
 #endif /* Renderer_hpp */

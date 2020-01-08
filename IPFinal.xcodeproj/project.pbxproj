@@ -50,6 +50,7 @@
 		1894F87423C5A5E1000495B3 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87223C5A5E1000495B3 /* Renderer.cpp */; };
 		1894F87623C5A628000495B3 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87523C5A628000495B3 /* glad.c */; };
 		1894F87E23C5A80B000495B3 /* StandardProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F87C23C5A80B000495B3 /* StandardProgram.cpp */; };
+		1894F88423C60968000495B3 /* CamRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1894F88223C60968000495B3 /* CamRenderer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -222,6 +223,8 @@
 		1894F87C23C5A80B000495B3 /* StandardProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StandardProgram.cpp; sourceTree = "<group>"; };
 		1894F87D23C5A80B000495B3 /* StandardProgram.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StandardProgram.hpp; sourceTree = "<group>"; };
 		1894F87F23C5A973000495B3 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		1894F88223C60968000495B3 /* CamRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CamRenderer.cpp; sourceTree = "<group>"; };
+		1894F88323C60968000495B3 /* CamRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CamRenderer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +299,8 @@
 				1894F87223C5A5E1000495B3 /* Renderer.cpp */,
 				1894F87323C5A5E1000495B3 /* Renderer.hpp */,
 				1894F87F23C5A973000495B3 /* Macros.h */,
+				1894F88223C60968000495B3 /* CamRenderer.cpp */,
+				1894F88323C60968000495B3 /* CamRenderer.hpp */,
 			);
 			path = IPFinal;
 			sourceTree = "<group>";
@@ -527,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1894F88423C60968000495B3 /* CamRenderer.cpp in Sources */,
 				1894F86B23C59E83000495B3 /* App.cpp in Sources */,
 				1894F87423C5A5E1000495B3 /* Renderer.cpp in Sources */,
 				1894F87E23C5A80B000495B3 /* StandardProgram.cpp in Sources */,

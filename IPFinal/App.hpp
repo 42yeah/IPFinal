@@ -12,6 +12,7 @@
 #include "CamFetch.hpp"
 #include "Window.hpp"
 #include "Renderer.hpp"
+#include "CamRenderer.hpp"
 
 
 class App {
