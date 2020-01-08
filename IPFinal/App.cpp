@@ -20,7 +20,6 @@ void App::init() {
 }
 
 void App::start() {
-    LOG("Hello world! The quick brown fox jumps over the lazy: %s", "dog");
     while (!glWindow.shouldClose()) {
         cv::Mat &mat = hardwareCamera.read();
 //        cv::imshow("Cam", mat);
@@ -39,8 +38,7 @@ void App::testRawMemory() {
     for (int i = 0; i < hardwareCamera.getBufferHeight(); i++) {
         for (int j = 0; j < hardwareCamera.getBufferWidth(); j++) {
             int offset = (i * hardwareCamera.getBufferWidth() + j) * 3;
-            std::cout << "[" << (unsigned int) buffer[offset + 0] << ", " << (unsigned int) buffer[offset + 1] << ", " << (unsigned int) buffer[offset + 2] << "] ";
+            LOG("[%d, %d, %d]", (unsigned int) buffer[offset + 0], (unsigned int) buffer[offset + 1], (unsigned int) buffer[offset + 2]);
         }
-        std::cout << std::endl;
     }
 }

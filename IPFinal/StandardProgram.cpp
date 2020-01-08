@@ -9,6 +9,7 @@
 #include "StandardProgram.hpp"
 #include <fstream>
 #include <sstream>
+#include "Macros.h"
 
 
 StandardProgram::StandardProgram() {
@@ -21,7 +22,7 @@ void StandardProgram::link(std::string vertexShaderPath, std::string fragmentSha
     glLinkProgram(program);
     char log[512];
     glGetProgramInfoLog(program, sizeof(log), nullptr, log);
-    std::cout << "Program: " << log << std::endl;
+    LOG("Program: %s", log);
     this->program = program;
     
     // === INITIALIZE LOCATION VARIABLES === //
@@ -39,7 +40,7 @@ GLuint StandardProgram::compile(GLuint shaderType, std::string shaderPath) {
     glCompileShader(shader);
     char log[512] = { 0 };
     glGetShaderInfoLog(shader, sizeof(log), nullptr, log);
-    std::cout << shaderPath.c_str() << ": " << log << std::endl;
+    LOG("%s: %s", shaderPath.c_str(), log);
     return shader;
 }
 
