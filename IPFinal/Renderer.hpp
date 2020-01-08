@@ -25,6 +25,7 @@ private:
     StandardProgram standardProgram;
     GLuint VAO;
     GLuint TBO;
+    GLuint dynamicTexture;
 };
 
 #endif /* Renderer_hpp */

@@ -11,7 +11,7 @@
 #include "Macros.h"
 
 
-Renderer::Renderer() : TBO(0) {
+Renderer::Renderer() : TBO(0), dynamicTexture(0) {
     
 }
 
@@ -44,6 +44,24 @@ void Renderer::render() {
 
 void Renderer::bufferTexture(void *buffer, int size) {
     glBindVertexArray(0);
-
+    if (!TBO) {
+        glGenBuffers(1, &TBO);
+        glBindBuffer(GL_ARRAY_BUFFER, TBO);
+        glBufferData(GL_ARRAY_BUFFER, size, buffer, GL_STREAM_DRAW);
+    } else {
+        glBindBuffer(GL_ARRAY_BUFFER, TBO);
+        void *gpuBuffer = glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
+        std::memcpy(gpuBuffer, buffer, size);
+        glUnmapBuffer(GL_ARRAY_BUFFER);
+    }
+    if (!dynamicTexture) {
+        glGenTextures(1, &dynamicTexture);
+        glBindTexture(GL_TEXTURE_2D, dynamicTexture);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexBuffer(GL_TEXTURE_2D, GL_RGB32UI, GL_TEXTURE_2D);
+    }
 }
 
