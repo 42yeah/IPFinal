@@ -11,7 +11,7 @@ uniform vec2 resolution;
 void main() {
     vec2 invUV = vec2(uv.x, 1.0 - uv.y);
     vec2 sp = invUV * resolution;
-    ivec2 samplePos = ivec2(floor(sp.x), floor(sp.y));
+    ivec2 samplePos = ivec2(floor(sp.x / 4.0), floor(sp.y / 4.0));
     int offset = samplePos.x + int(samplePos.y * resolution.x);
     vec3 sampled = texelFetch(cameraTexture, offset).bgr;
     float redness = sampled.r / 256.0;
