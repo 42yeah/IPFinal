@@ -29,4 +29,3 @@ int Camera::getBufferWidth() {
 int Camera::getBufferHeight() {
     return buffer.rows;
 }
-

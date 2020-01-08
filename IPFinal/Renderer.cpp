@@ -64,4 +64,3 @@ void Renderer::bufferTexture(void *buffer, int size) {
         glTexBuffer(GL_TEXTURE_2D, GL_RGB32UI, GL_TEXTURE_2D);
     }
 }
-

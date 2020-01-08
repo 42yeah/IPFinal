@@ -21,11 +21,8 @@ void App::init() {
 
 void App::start() {
     while (!glWindow.shouldClose()) {
-        cv::Mat &mat = hardwareCamera.read();
-//        cv::imshow("Cam", mat);
-//        if (cv::waitKey(5) != -1) {
-//            break;
-//        }
+        hardwareCamera.read();
+        glRenderer.bufferTexture(hardwareCamera.getRawMemory(), (hardwareCamera.getBufferHeight() * hardwareCamera.getBufferWidth()) * 3);
         glWindow.pollEvents();
         glRenderer.render();
         glWindow.swapBuffers();
