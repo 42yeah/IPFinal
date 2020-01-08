@@ -10,6 +10,7 @@
 #define Window_hpp
 
 #include "glad/glad/glad.h"
+#include <glm/glm.hpp>
 #include <GLFW/glfw3.h>
 #include <string>
 
@@ -21,8 +22,10 @@ public:
     
     void init();
     void pollEvents();
-    bool shouldClose();
     void swapBuffers();
+
+    glm::vec2 getResolution();
+    bool shouldClose();
     
 private:
     GLFWwindow *nativeWindow;

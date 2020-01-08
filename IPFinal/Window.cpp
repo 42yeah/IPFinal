@@ -37,3 +37,8 @@ void Window::pollEvents() {
 void Window::swapBuffers() {
     glfwSwapBuffers(nativeWindow);
 }
+
+glm::vec2 Window::getResolution() { 
+    return { (float) windowWidth, (float) windowHeight };
+}
+

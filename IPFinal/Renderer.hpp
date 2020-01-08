@@ -17,13 +17,12 @@ public:
     Renderer();
     
     void init();
-    void render();
+    void render(StandardProgram standardProgram);
     void bufferTexture(void *buffer, int size);
     
 private:
     // === VARIABLES === //
-    StandardProgram standardProgram;
-    GLuint VAO;
+    GLuint VAO, VBO;
     GLuint TBO;
     GLuint dynamicTexture;
 };

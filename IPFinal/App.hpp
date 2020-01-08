@@ -30,6 +30,7 @@ private:
     Camera hardwareCamera;
     Window glWindow;
     Renderer glRenderer;
+    StandardProgram standardProgram;
 };
 
 #endif /* App_hpp */

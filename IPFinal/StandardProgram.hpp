@@ -29,12 +29,15 @@ public:
     GLuint compile(GLuint shaderType, std::string shaderPath);
     void use();
     void configVertexPointers();
+    void setCameraTexture(GLuint texture, GLuint TBO);
+    void setResolution(glm::vec2 r);
 
 private:
     GLuint program;
     
     // === LOCATIONS === //
-    // 
+    GLuint cameraTexturePos;
+    GLuint resolutionPos;
 };
 
 #endif /* StandardProgram_hpp */

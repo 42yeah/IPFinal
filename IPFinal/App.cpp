@@ -17,14 +17,17 @@ void App::init() {
     glWindow.init();
     glRenderer = Renderer();
     glRenderer.init();
+    standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
 }
 
 void App::start() {
     while (!glWindow.shouldClose()) {
         hardwareCamera.read();
-        glRenderer.bufferTexture(hardwareCamera.getRawMemory(), (hardwareCamera.getBufferHeight() * hardwareCamera.getBufferWidth()) * 3);
         glWindow.pollEvents();
-        glRenderer.render();
+        glRenderer.bufferTexture(hardwareCamera.getRawMemory(), (hardwareCamera.getBufferHeight() * hardwareCamera.getBufferWidth()) * 3);
+        standardProgram.use();
+        standardProgram.setResolution(glWindow.getResolution());
+        glRenderer.render(standardProgram);
         glWindow.swapBuffers();
     }
 }
