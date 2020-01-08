@@ -6,14 +6,23 @@
 //  Copyright © 2020 aiofwa. All rights reserved.
 //
 
-#include <iostream>
+#include <iostreasssm>
 #include <opencv2/opencv.hpp>
 
 
 int main(int argc, const char * argv[]) {
-    cv::Mat mat;
-    mat = cv::imread("Assets/Windmill.jpg");
-    cv::imshow("Image", mat);
-    cv::waitKey(0);
+    cv::Mat frame;
+    cv::VideoCapture capture;
+    int deviceID = 0;
+    int apiID = cv::CAP_ANY;
+    capture.open(deviceID + apiID);
+    while (true) {
+        capture.read(frame);
+        cv::imshow("Capture", frame);
+        if (cv::waitKey(5) >= 0) {
+            break;
+        }
+    }
+    std::cout << "Done" << std::endl;
     return 0;
 }

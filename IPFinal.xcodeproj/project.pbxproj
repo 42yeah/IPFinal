@@ -40,6 +40,8 @@
 		18462A7D23C460DE0004C5EE /* libopencv_features2d.4.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 18462A6923C460DE0004C5EE /* libopencv_features2d.4.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		18462A8023C460DE0004C5EE /* libopencv_photo.4.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18462A6B23C460DE0004C5EE /* libopencv_photo.4.2.0.dylib */; };
 		18462A8123C460DE0004C5EE /* libopencv_photo.4.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 18462A6B23C460DE0004C5EE /* libopencv_photo.4.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		18462A9823C4775D0004C5EE /* libopencv_videoio.4.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18462A6123C460DE0004C5EE /* libopencv_videoio.4.2.0.dylib */; };
+		18462A9923C4775D0004C5EE /* libopencv_videoio.4.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 18462A6123C460DE0004C5EE /* libopencv_videoio.4.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +65,7 @@
 				18462A5423C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Embed Libraries */,
 				18462A4923C458620004C5EE /* libopencv_core.4.2.0.dylib in Embed Libraries */,
 				18462A7723C460DE0004C5EE /* libopencv_highgui.4.2.0.dylib in Embed Libraries */,
+				18462A9923C4775D0004C5EE /* libopencv_videoio.4.2.0.dylib in Embed Libraries */,
 				18462A7323C460DE0004C5EE /* libopencv_flann.4.2.0.dylib in Embed Libraries */,
 				18462A4D23C4587C0004C5EE /* libopencv_imgproc.4.2.0.dylib in Embed Libraries */,
 				18462A7B23C460DE0004C5EE /* libopencv_objdetect.4.2.0.dylib in Embed Libraries */,
@@ -193,6 +196,8 @@
 		18462A6A23C460DE0004C5EE /* libopencv_dnn.4.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_dnn.4.2.0.dylib; path = ../../../../usr/local/lib/libopencv_dnn.4.2.0.dylib; sourceTree = "<group>"; };
 		18462A6B23C460DE0004C5EE /* libopencv_photo.4.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_photo.4.2.0.dylib; path = ../../../../usr/local/lib/libopencv_photo.4.2.0.dylib; sourceTree = "<group>"; };
 		18462A8223C463EC0004C5EE /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		1894F86423C5995C000495B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1894F86523C59BF1000495B3 /* IPFinal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IPFinal.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +207,7 @@
 			files = (
 				18462A5A23C460DE0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Frameworks */,
 				18462A5823C460DE0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Frameworks */,
+				18462A9823C4775D0004C5EE /* libopencv_videoio.4.2.0.dylib in Frameworks */,
 				18462A5523C460DE0004C5EE /* libopencv_core.4.2.0.dylib in Frameworks */,
 				18462A5323C45EEB0004C5EE /* libopencv_imgcodecs.4.2.0.dylib in Frameworks */,
 				18462A5D23C460DE0004C5EE /* libopencv_imgproc.4.2.0.dylib in Frameworks */,
@@ -231,6 +237,7 @@
 		184629CA23C446270004C5EE = {
 			isa = PBXGroup;
 			children = (
+				1894F86423C5995C000495B3 /* Info.plist */,
 				18462A8223C463EC0004C5EE /* Assets */,
 				184629D523C446270004C5EE /* IPFinal */,
 				184629D423C446270004C5EE /* Products */,
@@ -249,6 +256,7 @@
 		184629D523C446270004C5EE /* IPFinal */ = {
 			isa = PBXGroup;
 			children = (
+				1894F86523C59BF1000495B3 /* IPFinal.entitlements */,
 				184629D623C446270004C5EE /* main.cpp */,
 			);
 			path = IPFinal;
@@ -446,7 +454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -r ${SRCROOT}/Assets ${BUILT_PRODUCTS_DIR}\n";
+			shellScript = "cp -r ${SRCROOT}/Assets ${BUILT_PRODUCTS_DIR}\ncp -r ${SRCROOT}/Info.plist ${BUILT_PRODUCTS_DIR}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -574,10 +582,13 @@
 		184629DB23C446270004C5EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = IPFinal/IPFinal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = KL2JALR869;
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include/opencv4;
+				INFOPLIST_FILE = Info.plist;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -586,10 +597,13 @@
 		184629DC23C446270004C5EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = IPFinal/IPFinal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = KL2JALR869;
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include/opencv4;
+				INFOPLIST_FILE = Info.plist;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
