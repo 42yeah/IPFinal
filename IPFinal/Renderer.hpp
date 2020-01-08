@@ -14,15 +14,17 @@
 
 class Renderer {
 public:
-    Renderer() {}
+    Renderer();
     
     void init();
     void render();
+    void bufferTexture(void *buffer, int size);
     
 private:
     // === VARIABLES === //
     StandardProgram standardProgram;
     GLuint VAO;
+    GLuint TBO;
 };
 
 #endif /* Renderer_hpp */

@@ -11,6 +11,10 @@
 #include "Macros.h"
 
 
+Renderer::Renderer() : TBO(0) {
+    
+}
+
 void Renderer::init() { 
     glClearColor(1.0f, 0.5f, 0.0f, 1.0f);
     glGenVertexArrays(1, &VAO);
@@ -37,3 +41,9 @@ void Renderer::render() {
     standardProgram.configVertexPointers();
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
+
+void Renderer::bufferTexture(void *buffer, int size) {
+    glBindVertexArray(0);
+
+}
+
