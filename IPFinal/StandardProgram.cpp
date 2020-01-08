@@ -60,7 +60,7 @@ void StandardProgram::configVertexPointers() {
 void StandardProgram::setCameraTexture(GLuint texture, GLuint TBO) { 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_BUFFER, texture);
-    glTexBuffer(GL_TEXTURE_BUFFER, GL_RGB32UI, TBO);
+    glTexBuffer(GL_TEXTURE_BUFFER, GL_R8, TBO);
     glUniform1i(this->cameraTexturePos, 0);
 }
 
