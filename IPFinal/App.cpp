@@ -12,15 +12,19 @@
 
 void App::init() { 
     hardwareCamera = Camera(0);
+    glWindow = Window("GL Window", 800, 600);
+    glWindow.init();
 }
 
 void App::start() {
-    while (true) {
+    while (!glWindow.shouldClose()) {
         cv::Mat &mat = hardwareCamera.read();
-        cv::imshow("Cam", mat);
-        if (cv::waitKey(5) != -1) {
-            break;
-        }
+//        cv::imshow("Cam", mat);
+//        if (cv::waitKey(5) != -1) {
+//            break;
+//        }
+        glWindow.pollEvents();
+        glWindow.swapBuffers();
     }
 }
 

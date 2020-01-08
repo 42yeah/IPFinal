@@ -15,7 +15,7 @@
 
 class Window {
 public:
-    Window();
+    Window() {};
     Window(std::string title, int w, int h);
     
     void init();

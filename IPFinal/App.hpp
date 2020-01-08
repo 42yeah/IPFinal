@@ -10,6 +10,7 @@
 #define App_hpp
 
 #include "CamFetch.hpp"
+#include "Window.hpp"
 
 
 class App {
@@ -26,6 +27,7 @@ public:
 private:
     // === VARIABLES === //
     Camera hardwareCamera;
+    Window glWindow;
 };
 
 #endif /* App_hpp */
