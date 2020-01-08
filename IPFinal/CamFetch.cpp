@@ -18,3 +18,15 @@ cv::Mat &Camera::read() {
     return buffer;
 }
 
+void *Camera::getRawMemory() { 
+    return &buffer.at<int>(0);
+}
+
+int Camera::getBufferWidth() {
+    return buffer.cols;
+}
+
+int Camera::getBufferHeight() {
+    return buffer.rows;
+}
+

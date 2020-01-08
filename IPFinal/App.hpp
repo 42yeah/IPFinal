@@ -20,9 +20,12 @@ public:
     void init();
     void start();
     
+    // === TESTS === //
+    void testRawMemory();
+    
 private:
     // === VARIABLES === //
-    Camera camera;
+    Camera hardwareCamera;
 };
 
 #endif /* App_hpp */

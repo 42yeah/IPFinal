@@ -18,6 +18,9 @@ public:
     Camera(int id);
     
     cv::Mat &read();
+    void *getRawMemory();
+    int getBufferWidth();
+    int getBufferHeight();
     
 private:
     cv::VideoCapture cap;
