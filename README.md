@@ -2,6 +2,8 @@
 
 ![Screenshot](screenshot.jpg)
 
+This is the Image Processing Final of mine, to present the power of HDR.
+
 ### Prerequisites
 
 - `cmake`
