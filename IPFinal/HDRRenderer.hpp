@@ -16,6 +16,7 @@
 
 class HDRRenderer : public IRenderer {
 public:
+    HDRRenderer() {}
     HDRRenderer(int w, int h);
     
     virtual void init() override;

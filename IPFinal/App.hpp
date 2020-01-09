@@ -11,8 +11,8 @@
 
 #include "CamFetch.hpp"
 #include "Window.hpp"
-#include "IRenderer.hpp"
 #include "CamRenderer.hpp"
+#include "HDRRenderer.hpp"
 
 
 class App {
@@ -37,6 +37,10 @@ private:
     CamRenderer camRenderer;
     StandardProgram standardProgram;
     Framebuffer hdrBuffer; // Which means this is to be taken to HDR post-processing
+    
+    // === HDR RENDERER === //
+    HDRRenderer hdrRenderer;
+    StandardProgram hdrProgram;
 };
 
 #endif /* App_hpp */

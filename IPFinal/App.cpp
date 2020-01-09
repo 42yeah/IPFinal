@@ -23,6 +23,10 @@ void App::init() {
     rendererList.push_back(&camRenderer);
     standardProgram.link("Assets/standard.vertex.glsl", "Assets/light.fragment.glsl");
     hdrBuffer.init();
+    
+    hdrRenderer = HDRRenderer(glWindow.getResolution().x, glWindow.getResolution().y);
+    hdrRenderer.init();
+    hdrProgram.link("Assets/standard.vertex.glsl", "Assets/hdr.fragment.glsl");
 }
 
 void App::start() {
@@ -31,6 +35,7 @@ void App::start() {
         glWindow.pollEvents();
         if (glWindow.keyPressed(GLFW_KEY_R)) {
             standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
+            hdrProgram.link("Assets/standard.vertex.glsl", "Assets/hdr.fragment.glsl");
         }
         
         // === WRONG RENDERING === //
@@ -40,6 +45,10 @@ void App::start() {
         standardProgram.setResolution(glm::vec2(hardwareCamera.getBufferWidth(), hardwareCamera.getBufferHeight()));
         camRenderer.render(standardProgram);
         hdrBuffer.unbind();
+        
+        // === HDR RENDERING === //
+        hdrRenderer.setTexture(hdrBuffer);
+        hdrRenderer.render(hdrProgram);
         
         glWindow.swapBuffers();
     }
