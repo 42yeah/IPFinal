@@ -30,10 +30,12 @@ private:
     // === VARIABLES === //
     Camera hardwareCamera;
     Window glWindow;
-    CamRenderer camRenderer;
-    StandardProgram standardProgram;
     
     std::vector<IRenderer *> rendererList;
+    
+    // === WAY-TO-LIGHT (OR DARK) CAM === //
+    CamRenderer camRenderer;
+    StandardProgram standardProgram;
 };
 
 #endif /* App_hpp */
