@@ -94,6 +94,7 @@
 		182B70BC23C7075C001257DB /* HDRRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HDRRenderer.hpp; sourceTree = "<group>"; };
 		182B70BF23C71ED2001257DB /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		182B70C023C71FA5001257DB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		182B70C123C7240A001257DB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		184629D323C446270004C5EE /* IPFinal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IPFinal; sourceTree = BUILT_PRODUCTS_DIR; };
 		184629D623C446270004C5EE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		184629DE23C446A50004C5EE /* libopencv_video.4.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_video.4.2.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.2.0_1/lib/libopencv_video.4.2.0.dylib; sourceTree = "<group>"; };
@@ -273,6 +274,7 @@
 		184629CA23C446270004C5EE = {
 			isa = PBXGroup;
 			children = (
+				182B70C123C7240A001257DB /* README.md */,
 				182B70C023C71FA5001257DB /* .gitignore */,
 				182B70BF23C71ED2001257DB /* CMakeLists.txt */,
 				1894F86423C5995C000495B3 /* Info.plist */,
