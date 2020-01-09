@@ -13,7 +13,8 @@
 
 void App::init() { 
     hardwareCamera = Camera(0);
-    glWindow = Window("HDR", 800, 600);
+    hardwareCamera.read();
+    glWindow = Window("HDR", hardwareCamera.getBufferWidth(), hardwareCamera.getBufferHeight());
     glWindow.init();
     
     // === RENDERERS === //
@@ -31,10 +32,15 @@ void App::start() {
         if (glWindow.keyPressed(GLFW_KEY_R)) {
             standardProgram.link("Assets/standard.vertex.glsl", "Assets/standard.fragment.glsl");
         }
+        
+        // === WRONG RENDERING === //
+        hdrBuffer.bind();
         camRenderer.bufferTexture(hardwareCamera.getRawMemory(), (hardwareCamera.getBufferHeight() * hardwareCamera.getBufferWidth()) * 3);
         standardProgram.use();
         standardProgram.setResolution(glm::vec2(hardwareCamera.getBufferWidth(), hardwareCamera.getBufferHeight()));
         camRenderer.render(standardProgram);
+        hdrBuffer.unbind();
+        
         glWindow.swapBuffers();
     }
 }
