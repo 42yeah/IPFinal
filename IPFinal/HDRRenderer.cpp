@@ -19,7 +19,11 @@ void HDRRenderer::init() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+#ifdef __APPLE__
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, textureWidth * 2, textureHeight * 2, 0, GL_RGBA, GL_FLOAT, nullptr);
+#else
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, textureWidth, textureHeight, 0, GL_RGBA, GL_FLOAT, nullptr);
+#endif
     
     // === ORIGINAL INITIALIZATIONS === //
     GLuint VBO;
