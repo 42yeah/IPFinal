@@ -9,7 +9,7 @@
 #include "Framebuffer.hpp"
 
 
-Framebuffer::Framebuffer() {
+Framebuffer::Framebuffer() : texture(0) {
     glGenFramebuffers(1, &FBO);
 }
 
@@ -20,5 +20,3 @@ void Framebuffer::bind() {
 void Framebuffer::unbind() { 
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
-
-

@@ -18,9 +18,11 @@ public:
     
     void bind();
     void unbind();
+    GLuint getTexture();
     
 private:
     GLuint FBO;
+    GLuint texture;
 };
 
 #endif /* Framebuffer_hpp */

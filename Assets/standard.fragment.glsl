@@ -19,5 +19,5 @@ vec4 textureCam(vec2 _uv) {
 }
 
 void main() {
-    color = vec4(textureCam(uv).rgb, 1.0);
+    color = vec4(textureCam(uv).rgb + 0.5, 1.0);
 }
