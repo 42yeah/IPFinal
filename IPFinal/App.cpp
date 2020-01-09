@@ -24,7 +24,7 @@ void App::init() {
     standardProgram.link("Assets/standard.vertex.glsl", "Assets/light.fragment.glsl");
     hdrBuffer.init();
     
-    hdrRenderer = HDRRenderer(glWindow.getResolution().x, glWindow.getResolution().y);
+    hdrRenderer = HDRRenderer(hardwareCamera.getBufferWidth(), hardwareCamera.getBufferHeight());
     hdrRenderer.init();
     hdrProgram.link("Assets/standard.vertex.glsl", "Assets/hdr.fragment.glsl");
 }
