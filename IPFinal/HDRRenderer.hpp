@@ -25,7 +25,7 @@ public:
 private:
     // === VARIABLES === //
     int textureWidth, textureHeight;
-    GLuint VAO, VBO;
+    GLuint VAO;
     GLuint dynamicTexture;
 };
 

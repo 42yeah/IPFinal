@@ -20,10 +20,32 @@ void HDRRenderer::init() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, textureWidth, textureHeight, 0, GL_RGBA, GL_FLOAT, nullptr);
+    
+    // === ORIGINAL INITIALIZATIONS === //
+    GLuint VBO;
+    glClearColor(1.0f, 0.5f, 0.0f, 1.0f);
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    float data[] = {
+        /* aPos */ /* Texture UV */
+        -1.0f, -1.0f, 0.0f, 0.0f,
+        1.0f, -1.0f, 1.0f, 0.0f,
+        1.0f, 1.0f, 1.0f, 1.0f,
+        1.0f, 1.0f, 1.0f, 1.0f,
+        -1.0f, 1.0f, 0.0f, 1.0f,
+        -1.0f, -1.0f, 0.0f, 0.0f
+    };
+    glBufferData(GL_ARRAY_BUFFER, sizeof(data), data, GL_STATIC_DRAW);
 }
 
 void HDRRenderer::render(StandardProgram &standardProgram) {
-    // TODO;
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    standardProgram.use();
+    standardProgram.setHDRTexture(dynamicTexture);
+    glBindVertexArray(VAO);
+    standardProgram.configVertexPointers();
+    glDrawArrays(GL_TRIANGLES, 0, 6);
 }
 
 void HDRRenderer::setTexture(Framebuffer &buffer) {

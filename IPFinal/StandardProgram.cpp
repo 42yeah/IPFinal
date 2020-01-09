@@ -27,6 +27,7 @@ void StandardProgram::link(std::string vertexShaderPath, std::string fragmentSha
     
     // === INITIALIZE LOCATION VARIABLES === //
     cameraTexturePos = glGetUniformLocation(this->program, "cameraTexture");
+    hdrTexturePos = glGetUniformLocation(this->program, "hdrTexture");
     resolutionPos = glGetUniformLocation(this->program, "resolution");
 }
 
@@ -64,6 +65,13 @@ void StandardProgram::setCameraTexture(GLuint texture, GLuint TBO) {
     glUniform1i(this->cameraTexturePos, 0);
 }
 
+void StandardProgram::setHDRTexture(GLuint texture) {
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    glUniform1i(this->hdrTexturePos, 1);
+}
+
 void StandardProgram::setResolution(glm::vec2 r) {
     glUniform2f(resolutionPos, r.x, r.y);
 }
+

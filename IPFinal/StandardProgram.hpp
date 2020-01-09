@@ -30,6 +30,7 @@ public:
     void use();
     void configVertexPointers();
     void setCameraTexture(GLuint texture, GLuint TBO);
+    void setHDRTexture(GLuint texture);
     void setResolution(glm::vec2 r);
 
 private:
@@ -37,6 +38,7 @@ private:
     
     // === LOCATIONS === //
     GLuint cameraTexturePos;
+    GLuint hdrTexturePos;
     GLuint resolutionPos;
 };
 
