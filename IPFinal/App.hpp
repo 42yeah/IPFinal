@@ -36,6 +36,7 @@ private:
     // === WAY-TO-LIGHT (OR DARK) CAM === //
     CamRenderer camRenderer;
     StandardProgram standardProgram;
+    Framebuffer hdrBuffer; // Which means this is to be taken to HDR post-processing
 };
 
 #endif /* App_hpp */

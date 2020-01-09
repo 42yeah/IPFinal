@@ -16,6 +16,7 @@ class Framebuffer {
 public:
     Framebuffer();
     
+    void init();
     void bind();
     void unbind();
     GLuint getTexture();

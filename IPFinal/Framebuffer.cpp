@@ -9,7 +9,10 @@
 #include "Framebuffer.hpp"
 
 
-Framebuffer::Framebuffer() : texture(0) {
+Framebuffer::Framebuffer() : texture(0), FBO(0) {
+}
+
+void Framebuffer::init() {
     glGenFramebuffers(1, &FBO);
 }
 

@@ -21,8 +21,7 @@ void App::init() {
     camRenderer.init();
     rendererList.push_back(&camRenderer);
     standardProgram.link("Assets/standard.vertex.glsl", "Assets/light.fragment.glsl");
-    
-    
+    hdrBuffer.init();
 }
 
 void App::start() {
